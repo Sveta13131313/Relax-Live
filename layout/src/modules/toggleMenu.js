@@ -1,5 +1,6 @@
 const toggleMenu = () => {
 
+  //Плавный скролл
     const anchors = document.querySelectorAll('a[href^="#"]');
     for (const anchor of anchors) {
       const blockID = anchor.getAttribute('href');
@@ -20,7 +21,18 @@ const toggleMenu = () => {
       }
     }
   
-    const menu = document.querySelector('menu');
+
+    //Открытие и закрытие меню
+    const menu = document.querySelector('.popup-dialog-menu'),
+    style = document.createElement('style');
+
+    style.textContent = `
+        .active-menu {
+            transform: translate3d(0px, 0px, 0px);
+        }
+    `;
+    style.id = 'toggleStyle';
+    document.head.append(style);
   
     const handlerMenu = () => {
       menu.classList.toggle('active-menu');
@@ -28,10 +40,9 @@ const toggleMenu = () => {
   
     document.addEventListener('click', e => {
       const target = e.target;
-      if (target.classList.contains('close-btn') ||
-      target.closest('menu>ul>li>a') ||
-      target.closest('.menu') ||
-      (menu.classList.contains('active-menu') && !target.closest('menu'))) {
+      if (target.matches('.close-menu') ||
+      target.closest('.popup-dialog-menu') ||
+      target.matches('img.menu__icon')){
         handlerMenu();
       }
     });
