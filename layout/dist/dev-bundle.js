@@ -49,7 +49,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar togglePhone = function togglePhone() {\n  //Открытие и закрытие доп телефона\n  var divNumber = document.querySelector = '.header-contacts__phone-number-accord';\n  document.addEventListener('click', function (e) {\n    var target = e.target;\n\n    if (target.closest('.header-contacts__arrow')) {}\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (togglePhone);\n\n//# sourceURL=webpack://layout/./src/modules/togglePhone.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar togglePhone = function togglePhone() {\n  //Открытие и закрытие доп телефона\n  var divNumber = document.querySelector('.header-contacts__phone-number-accord');\n  document.addEventListener('click', function (e) {\n    var target = e.target;\n\n    if (target.closest('.header-contacts__arrow')) {}\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (togglePhone);\n\n//# sourceURL=webpack://layout/./src/modules/togglePhone.js?");
 
 /***/ }),
 
@@ -431,7 +431,7 @@ eval("var logLevel = \"info\";\n\nfunction dummy() {}\n\nfunction shouldLog(leve
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("1d56ec0bdb8bc6e2823d")
+/******/ 		__webpack_require__.h = () => ("529f41ba2c9b698a7b3f")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
