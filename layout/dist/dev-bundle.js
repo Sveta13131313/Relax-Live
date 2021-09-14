@@ -49,7 +49,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar togglePhone = function togglePhone() {\n  //Открытие и закрытие доп телефона\n  var divNumber = document.querySelector('.header-contacts__phone-number-accord');\n  document.addEventListener('click', function (e) {\n    var target = e.target;\n\n    if (target.closest('.header-contacts__arrow')) {}\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (togglePhone);\n\n//# sourceURL=webpack://layout/./src/modules/togglePhone.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar togglePhone = function togglePhone() {\n  //Открытие и закрытие доп телефона \n  var divNumber = document.querySelector('.header-contacts__phone-number-accord'),\n      aNumber = document.querySelector('.header-contacts__phone-number-accord>.header-contacts__phone-number'),\n      imgNumber = document.querySelector('.header-contacts__arrow > img'),\n      style = document.createElement('style');\n  style.textContent = \"\\n    .header-contacts_number_div_open {\\n        position: relative;\\n    }\\n    .header-contacts_number_a_open\\n    {\\n        opacity: 1 !important;;\\n    }\\n    .header-contacts_arrow_img {\\n        transform: rotate(180deg);\\n    }\\n      \";\n  style.id = 'phoneNumbers';\n  document.head.append(style);\n  document.addEventListener('click', function (e) {\n    var target = e.target;\n\n    if (target.closest('.header-contacts__arrow')) {\n      divNumber.classList.toggle('header-contacts_number_div_open');\n      aNumber.classList.toggle('header-contacts_number_a_open');\n      imgNumber.classList.toggle('header-contacts_arrow_img');\n    }\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (togglePhone);\n\n//# sourceURL=webpack://layout/./src/modules/togglePhone.js?");
 
 /***/ }),
 
@@ -431,7 +431,7 @@ eval("var logLevel = \"info\";\n\nfunction dummy() {}\n\nfunction shouldLog(leve
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("529f41ba2c9b698a7b3f")
+/******/ 		__webpack_require__.h = () => ("ad3fa08d094cd5136c9e")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
