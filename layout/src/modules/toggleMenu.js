@@ -25,7 +25,6 @@ const toggleMenu = () => {
   //Открытие и закрытие меню
   const menu = document.querySelector('.popup-dialog-menu'),
     style = document.createElement('style');
-
   style.textContent = `
         .active-menu {
             transform: translate3d(0px, 0px, 0px);
@@ -42,7 +41,8 @@ const toggleMenu = () => {
     const target = e.target;
     if (target.matches('.close-menu') ||
       target.closest('.popup-dialog-menu') ||
-      target.matches('img.menu__icon')) {
+      target.matches('img.menu__icon')||
+     (menu.matches('.active-menu') && !target.closest('.active-menu'))) {
       handlerMenu();
     }
   });
