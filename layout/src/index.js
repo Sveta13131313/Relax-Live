@@ -3,11 +3,10 @@ import togglePhone from './modules/togglePhone';
 import showPrice from './modules/showPrice';
 import showPrivacyPolicy from './modules/showPrivacyPolicy';
 import showFormulaPic from './modules/showFormulaPic';
+import validation from './modules/validation';
+import sendForm from './modules/sendForm';
 
-
-
-
-// Меню
+// Открытие меню
 toggleMenu();
 
 //Открытие доп телефона
@@ -21,3 +20,9 @@ showPrice();
 
 //Показ подсказок формулы успеха
 showFormulaPic();
+
+//Проверка номеров
+validation();
+
+//Отправка формы
+sendForm();

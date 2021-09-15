@@ -27,7 +27,18 @@ eval("\n\nmodule.exports = ansiHTML\n\n// Reference to https://github.com/sindre
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_toggleMenu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/toggleMenu */ \"./src/modules/toggleMenu.js\");\n/* harmony import */ var _modules_togglePhone__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/togglePhone */ \"./src/modules/togglePhone.js\");\n/* harmony import */ var _modules_showPrice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/showPrice */ \"./src/modules/showPrice.js\");\n/* harmony import */ var _modules_showPrivacyPolicy__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/showPrivacyPolicy */ \"./src/modules/showPrivacyPolicy.js\");\n/* harmony import */ var _modules_showFormulaPic__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/showFormulaPic */ \"./src/modules/showFormulaPic.js\");\n\n\n\n\n // Меню\n\n(0,_modules_toggleMenu__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(); //Открытие доп телефона\n\n(0,_modules_togglePhone__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(); //Открытие политики конфиденциальности\n\n(0,_modules_showPrivacyPolicy__WEBPACK_IMPORTED_MODULE_3__[\"default\"])(); //Показ модального окна\n\n(0,_modules_showPrice__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(); //Показ подсказок формулы успеха\n\n(0,_modules_showFormulaPic__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\n\n//# sourceURL=webpack://layout/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_toggleMenu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/toggleMenu */ \"./src/modules/toggleMenu.js\");\n/* harmony import */ var _modules_togglePhone__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/togglePhone */ \"./src/modules/togglePhone.js\");\n/* harmony import */ var _modules_showPrice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/showPrice */ \"./src/modules/showPrice.js\");\n/* harmony import */ var _modules_showPrivacyPolicy__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/showPrivacyPolicy */ \"./src/modules/showPrivacyPolicy.js\");\n/* harmony import */ var _modules_showFormulaPic__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/showFormulaPic */ \"./src/modules/showFormulaPic.js\");\n/* harmony import */ var _modules_validation__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/validation */ \"./src/modules/validation.js\");\n/* harmony import */ var _modules_sendForm__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/sendForm */ \"./src/modules/sendForm.js\");\n\n\n\n\n\n\n // Открытие меню\n\n(0,_modules_toggleMenu__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(); //Открытие доп телефона\n\n(0,_modules_togglePhone__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(); //Открытие политики конфиденциальности\n\n(0,_modules_showPrivacyPolicy__WEBPACK_IMPORTED_MODULE_3__[\"default\"])(); //Показ модального окна\n\n(0,_modules_showPrice__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(); //Показ подсказок формулы успеха\n\n(0,_modules_showFormulaPic__WEBPACK_IMPORTED_MODULE_4__[\"default\"])(); //Проверка номеров\n\n(0,_modules_validation__WEBPACK_IMPORTED_MODULE_5__[\"default\"])(); //Отправка формы\n\n(0,_modules_sendForm__WEBPACK_IMPORTED_MODULE_6__[\"default\"])();\n\n//# sourceURL=webpack://layout/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/sendForm.js":
+/*!*********************************!*\
+  !*** ./src/modules/sendForm.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar sendForm = function sendForm() {//\n  //    document.querySelectorAll('.feedback__form').forEach(form => {\n  //\n  //\n  //        form.addEventListener('submit', event => {\n  //            event.preventDefault();\n  //            const formData = new FormData(form);\n  //\n  //            formData.forEach((val, key) => {\n  //                formData[key] = val;\n  //            });\n  //\n  //            postData(formData).then((response) => {\n  //                    if (response.status !== 200) {\n  //                        throw new Error('status network not 200');\n  //                    }\n  //                })\n  //                .catch(error => console.error(error));\n  //\n  //            event.target.reset();\n  //        });\n  //    });\n  //\n  //    //Функция запроса на сервер\n  //    const postData = formData => {\n  //        fetch('./server.php', {\n  //            method: 'POST',\n  //            headers: {\n  //                'Content-Type': 'application/json'\n  //            },\n  //            body: JSON.stringify(formData)\n  //        });\n  //    };\n  //\n  //\n  //\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (sendForm);\n\n//# sourceURL=webpack://layout/./src/modules/sendForm.js?");
 
 /***/ }),
 
@@ -83,6 +94,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar togglePhone = function togglePhone() {\n  //Открытие и закрытие доп телефона \n  var divNumber = document.querySelector('.header-contacts__phone-number-accord'),\n      aNumber = document.querySelector('.header-contacts__phone-number-accord>.header-contacts__phone-number'),\n      imgNumber = document.querySelector('.header-contacts__arrow > img'),\n      style = document.createElement('style');\n  style.textContent = \"\\n    .header-contacts_number_div_open {\\n        position: relative;\\n    }\\n    .header-contacts_number_a_open\\n    {\\n        opacity: 1 !important;;\\n    }\\n    .header-contacts_arrow_img {\\n        transform: rotate(180deg);\\n    }\\n      \";\n  style.id = 'phoneNumbers';\n  document.head.append(style);\n  document.addEventListener('click', function (e) {\n    var target = e.target;\n\n    if (target.closest('.header-contacts__arrow')) {\n      divNumber.classList.toggle('header-contacts_number_div_open');\n      aNumber.classList.toggle('header-contacts_number_a_open');\n      imgNumber.classList.toggle('header-contacts_arrow_img');\n    }\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (togglePhone);\n\n//# sourceURL=webpack://layout/./src/modules/togglePhone.js?");
+
+/***/ }),
+
+/***/ "./src/modules/validation.js":
+/*!***********************************!*\
+  !*** ./src/modules/validation.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar validation = function validation() {\n  var telefon = document.querySelectorAll('input[name=\"phone\"]');\n\n  function maskPhone(elem) {\n    var masked = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '+7 (___) ___-__-__';\n\n    function mask(event) {\n      var keyCode = event.keyCode;\n      var template = masked,\n          def = template.replace(/\\D/g, ''),\n          val = this.value.replace(/\\D/g, '');\n      var i = 0,\n          newValue = template.replace(/[_\\d]/g, function (a) {\n        return i < val.length ? val.charAt(i++) || def.charAt(i) : a;\n      });\n      i = newValue.indexOf('_');\n\n      if (i !== -1) {\n        newValue = newValue.slice(0, i);\n      }\n\n      var reg = template.substr(0, this.value.length).replace(/_+/g, function (a) {\n        return '\\\\d{1,' + a.length + '}';\n      }).replace(/[+()]/g, '\\\\$&');\n      reg = new RegExp('^' + reg + '$');\n\n      if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) {\n        this.value = newValue;\n      }\n\n      if (event.type === 'blur' && this.value.length < 5) {\n        this.value = '';\n      }\n    }\n\n    elem.addEventListener('input', mask);\n    elem.addEventListener('focus', mask);\n    elem.addEventListener('blur', mask);\n  }\n\n  telefon.forEach(function (elem) {\n    maskPhone(elem);\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (validation);\n\n//# sourceURL=webpack://layout/./src/modules/validation.js?");
 
 /***/ }),
 
@@ -464,7 +486,7 @@ eval("var logLevel = \"info\";\n\nfunction dummy() {}\n\nfunction shouldLog(leve
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("d894708c0dbaae571a5e")
+/******/ 		__webpack_require__.h = () => ("ce7efc024e6d08160345")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
