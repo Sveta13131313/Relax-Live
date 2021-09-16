@@ -5,6 +5,7 @@ import showPrivacyPolicy from './modules/showPrivacyPolicy';
 import showFormulaPic from './modules/showFormulaPic';
 import validation from './modules/validation';
 import sendForm from './modules/sendForm';
+import accardionFAQ from './modules/accardionFAQ';
 
 // Открытие меню
 toggleMenu();
@@ -26,3 +27,6 @@ validation();
 
 //Отправка формы
 sendForm();
+
+//Аккардеон для блока вопросов
+accardionFAQ();

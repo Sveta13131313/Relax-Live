@@ -41,10 +41,25 @@ const toggleMenu = () => {
     const target = e.target;
     if (target.matches('.close-menu') ||
       target.closest('.popup-dialog-menu') ||
-      target.matches('img.menu__icon')||
-     (menu.matches('.active-menu') && !target.closest('.active-menu'))) {
+      target.matches('img.menu__icon') ||
+      (menu.matches('.active-menu') && !target.closest('.active-menu'))) {
       handlerMenu();
     }
+    else if (target.matches('.close-thank') || (target.closest('.popup-thank') && !target.closest('.feedback-wrap.popup-thank-bg') && target.closest('.openPopUp'))) {
+      document.querySelector('.popup-thank').style.visibility = 'hidden';
+      document.querySelector('.popup-thank').classList.remove('openPopUp');
+    }
+    //открытие окна "консультация"
+    else if (target.closest('button.button.button_wide')) {
+      document.querySelector('.popup-consultation').style.visibility = 'visible';
+      document.querySelector('.popup-consultation').classList.add('openPopUp');
+    }
+      //закрытие окна "консультация"
+     else if (target.closest('.close.close-consultation') || (target.closest('.openPopUp') && target.closest('.popup-consultation') && !target.closest('.feedback-wrap'))) {
+      document.querySelector('.popup-consultation').style.visibility = 'hidden';
+      document.querySelector('.popup-consultation').classList.remove('openPopUp');
+    } 
+ 
   });
 };
 
