@@ -2500,6 +2500,10 @@ div.wave-block:nth-child(17):after {
     .transparency-item {
         margin-left: auto;
         margin-right: auto;
+        display: none;
+    }
+    .transparency-item.active {
+        display: flex;
     }
 }
 
@@ -2591,6 +2595,7 @@ div.wave-block:nth-child(17):after {
 @media (max-width: 575px) {
     .transparency-item__img img {
         width: 113px;
+        
     }
 }
 
@@ -4152,7 +4157,7 @@ div.wave-block:nth-child(17):after {
 .reviews-slider__slide {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
+    display: none;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -4163,6 +4168,9 @@ div.wave-block:nth-child(17):after {
     text-align: center;
     color: #322823;
     min-height: 100%;
+}
+.reviews-slider__slide.reviews-slide-active {
+    display: flex;
 }
 
 .reviews-slider__slide-img {
@@ -8954,6 +8962,82 @@ strong {
     transform: scale(1, -1);
 }
 
-.slider-dots {
+/*.slider-dots {
     display: none;
+}
+*/
+
+.types-repair {
+    display: none;
+}
+.types-repair.active {
+    display: block;
+}
+.repair-types-slider__slide {
+    display: none;
+}
+.repair-types-slider__slide.active {
+    display: block;
+}
+.repair-types .repair-slider-slide {
+    display: inline-block;
+}
+.repair-types .repair-slider-wrapper {
+    min-width: auto;
+    flex-wrap: nowrap;
+}
+
+@media (max-width: 1024px) {
+    .repair-types-nav__item svg {
+        height: 37px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    .portfolio-slider {
+        width: 92%;
+    }
+}
+
+.portfolio-slider-wrapper {
+    display: flex;
+    transition: 0.5s;
+    width: 100%;
+}
+@media (max-width: 900px) {
+    .portfolio-slider {
+        width: 352px;
+    }
+}
+.repair-types-nav.desktop-hide {
+    padding-bottom: 4px;
+}
+.portfolio-slider-mobile .portfolio-slider__slide-frame {
+    display: none;
+}
+.portfolio-slider__slide-frame.active {
+    display: block;
+}
+.popup-portfolio-text.active {
+    display: block;
+}
+
+.popup-portfolio-text-wrapper {
+    position: relative;
+    width: 33%;
+    height: 100%;
+}
+
+@media (max-width: 1024px) {
+    .popup-portfolio-text-wrapper {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.popup-transparency-slider__slide {
+    display: none;
+}
+.popup-transparency-slider__slide.active {
+    display: block;
 }

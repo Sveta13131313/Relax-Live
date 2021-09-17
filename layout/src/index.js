@@ -6,8 +6,8 @@ import showFormulaPic from './modules/showFormulaPic';
 import validation from './modules/validation';
 import sendForm from './modules/sendForm';
 import accardionFAQ from './modules/accardionFAQ';
-import sliderCarousel from './modules/sliderCarousel';
-import sliderPortfolio from './modules/sliderPortfolio';
+import sliderCarouselReviews from './modules/sliderCarouselReviews';
+import sliderDocumentModal from './modules/sliderDocumentModal';
 import sliderDocument from './modules/sliderDocument';
 import dowlandData from './modules/dowlandData';
 
@@ -40,10 +40,10 @@ sendForm();
 accardionFAQ();
 
 //слайдер с отзывами
-sliderCarousel();
+sliderCarouselReviews();
 
-//Слайдер портфолио
-sliderPortfolio();
+//Слайдер Документов при адаптиве
+sliderDocumentModal();
 
 //Слайдер документов при их открытии
 sliderDocument();
