@@ -59,6 +59,16 @@ const toggleMenu = () => {
       document.querySelector('.popup-consultation').style.visibility = 'hidden';
       document.querySelector('.popup-consultation').classList.remove('openPopUp');
     } 
+    //открытие окна Документ
+    else if (target.closest('.transparency-item__img')) {
+      document.querySelector('.popup-transparency').style.visibility = 'visible';
+      document.querySelector('.popup-transparency').classList.add('openPopUp');
+    }
+      //закрытие окна Документы
+     else if (target.closest('#transparency-popup-counter')  || target.closest('.mobile-hide')|| (target.closest('.openPopUp') && target.closest('.popup-transparency') && !target.closest('.openPopUp'))) {
+      document.querySelector('.popup-transparency').style.visibility = 'hidden';
+      document.querySelector('.popup-transparency').classList.remove('openPopUp');
+    } 
  
   });
 };

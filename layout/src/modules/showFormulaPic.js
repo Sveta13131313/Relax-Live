@@ -1,7 +1,7 @@
 const showFormulaPic = () => {
 
     const elems = document.querySelectorAll('.formula-item__icon'),
-    style = document.createElement('style');
+        style = document.createElement('style');
     style.id = 'prompt';
     style.textContent = `
         .formula-item-popup-show {
@@ -14,7 +14,7 @@ const showFormulaPic = () => {
         }
     `;
     document.head.append(style);
-
+    //При наведении на элементы появляются комментарии
     elems.forEach(item => {
         item.addEventListener('mouseover', e => {
             const block = e.target.closest('.formula-item');

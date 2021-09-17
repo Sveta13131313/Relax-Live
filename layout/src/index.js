@@ -6,6 +6,14 @@ import showFormulaPic from './modules/showFormulaPic';
 import validation from './modules/validation';
 import sendForm from './modules/sendForm';
 import accardionFAQ from './modules/accardionFAQ';
+import sliderCarousel from './modules/sliderCarousel';
+import sliderPortfolio from './modules/sliderPortfolio';
+import sliderDocument from './modules/sliderDocument';
+import dowlandData from './modules/dowlandData';
+
+
+
+
 
 // Открытие меню
 toggleMenu();
@@ -30,3 +38,15 @@ sendForm();
 
 //Аккардеон для блока вопросов
 accardionFAQ();
+
+//слайдер с отзывами
+sliderCarousel();
+
+//Слайдер портфолио
+sliderPortfolio();
+
+//Слайдер документов при их открытии
+sliderDocument();
+
+//Подгрузка данных
+dowlandData();

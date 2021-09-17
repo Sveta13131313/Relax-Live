@@ -18,6 +18,13 @@ const sendForm = () => {
             });
         });
 
+          //Проверка на ввод в input Поле Имя
+    document.querySelectorAll('input[name="name"]').forEach(item => {
+        item.addEventListener('input', () => {
+            item.value = item.value.replace(/[^а-яА-яёЁ]/g, '');
+        });
+    });
+
         //Отправка формы
         form.addEventListener('submit', e => {
             e.preventDefault();
