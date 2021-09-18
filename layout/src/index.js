@@ -10,10 +10,10 @@ import sliderCarouselReviews from './modules/sliderCarouselReviews';
 import sliderDocumentModal from './modules/sliderDocumentModal';
 import sliderDocument from './modules/sliderDocument';
 import dowlandData from './modules/dowlandData';
-
-
-
-
+import sliderPortfolio from './modules/sliderPortfolio';
+import portfolioPopUp from './modules/portfolioPopUp.js';
+import portfolioMobiel from './modules/portfolioMobiel';
+import repair from './modules/repair';
 
 // Открытие меню
 toggleMenu();
@@ -50,3 +50,15 @@ sliderDocument();
 
 //Подгрузка данных
 dowlandData();
+
+//Слайдер портфолио работ
+sliderPortfolio();
+
+//Пролистывание открытого слайдера с работами
+portfolioPopUp();
+
+//Мобильная версия слайдера с работами
+portfolioMobiel();
+
+//Виды работ Табы
+repair();
