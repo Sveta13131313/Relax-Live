@@ -55,7 +55,7 @@ const sliderDocumentModal = () => {
         id = target.closest('.transparency-item').dataset.id;
       modalSlider.children[id].classList.add('active');
       changeCounter(modalSlider);
-      openPopup(document.querySelector('.popup-transparency'));
+      document.querySelector('.popup-transparency').classList.add('active');
     }
 
     if (target.closest('#transparency-arrow_left')) changeSlide(slider, -1);

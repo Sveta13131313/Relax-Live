@@ -52,23 +52,29 @@ const toggleMenu = () => {
     else if (target.closest('button.button.button_wide')) {
       document.querySelector('.popup-consultation').style.visibility = 'visible';
     }
-      //закрытие окна "консультация"
-     else if (target.closest('.close.close-consultation') || (target.closest('.popup-consultation') && !target.closest('.feedback-wrap'))) {
+    //закрытие окна "консультация"
+    else if (target.closest('.close.close-consultation') || (target.closest('.popup-consultation') && !target.closest('.feedback-wrap'))) {
       document.querySelector('.popup-consultation').style.visibility = 'hidden';
-    } 
+    }
     //открытие окна Документ
     else if (target.closest('.transparency-item__img')) {
       document.querySelector('.popup-transparency').style.visibility = 'visible';
     }
-      //закрытие окна Документы
-     else if (target.closest('#transparency-popup-counter')  || target.closest('.mobile-hide')|| (target.closest('.popup-transparency') && !target.closest('.openPopUp'))) {
+    //закрытие окна Документы
+   // else if (target.closest('#transparency-popup-counter') || target.closest('.mobile-hide') || (target.closest('.popup-transparency') && !target.closest('.openPopUp'))) {
+   //   document.querySelector('.popup-transparency').style.visibility = 'hidden';
+   // }
+       //закрытие окна Портфолио
+      else if ((target.closest('.close') && target.closest('.popup-portfolio')) || (target.closest('.active') && target.closest('.popup-portfolio') && !target.closest('.popup-dialog.popup-dialog-portfolio'))) {
+         document.getElementById('closePortfolio').classList.remove('active');
+     }
+
+    else if (target.closest('.popup-transparency') && !target.closest('.popup-transparency-slider-wrap')){
       document.querySelector('.popup-transparency').style.visibility = 'hidden';
-    } 
-      //закрытие окна Портфолио
-     else if ((target.closest('.close') && target.closest('.popup-portfolio')) || (target.closest('.active') && target.closest('.popup-portfolio') && !target.closest('.popup-dialog.popup-dialog-portfolio'))) {
-        document.getElementById('closePortfolio').classList.remove('active');
+      document.querySelector('.popup-transparency').classList.remove('active');
+
     }
- 
+  
   });
 };
 
